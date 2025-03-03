@@ -25,6 +25,7 @@ n = len(df["Time (s)"])
 fs = n / T  
 nyq = fs / 2  
 cutoff = 1 / (0.2)  
+order = 4  
 
 df["filter_a_x"] = butter_lowpass_filter(df["X (m/s^2)"], cutoff, fs, nyq, order)
 
